@@ -1,0 +1,21 @@
+{% extends 'authentication/base.html' %}
+{% block content %}
+<h2 class="text-center">Login</h2>
+<div class="col-md-6 offset-md-3">
+        <form method="POST">
+            {% csrf_token %}
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter username", name="username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Enter password", name="password">
+                </div>
+                <!-- We can use this as "Remember Me" function using cookie afterwards -->
+                <!-- <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+</div>
+{% endblock %}
